@@ -1,0 +1,19 @@
+{
+  "name": "@julien-dev/dropdown-react-p14",
+  "version": "0.0.1",
+  "description": "module npm qui met a disposotion un dropdown react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julien-Oclock/Dropdown-react-p14.git"
+  },
+  "author": "Julien-dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Julien-Oclock/Dropdown-react-p14/issues"
+  },
+  "homepage": "https://github.com/Julien-Oclock/Dropdown-react-p14#readme"
+}
