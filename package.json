@@ -1,6 +1,6 @@
 {
   "name": "@julien-dev/dropdown-react-p14",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple dropdown component for React",
   "main": "index.js",
   "scripts": {
