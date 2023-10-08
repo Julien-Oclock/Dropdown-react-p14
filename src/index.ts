@@ -1,1 +1,2 @@
-export { Dropdown } from "./dropdown.js";;
+export { Dropdown } from "./dropdown.js";
+import "./dropdown.css"
