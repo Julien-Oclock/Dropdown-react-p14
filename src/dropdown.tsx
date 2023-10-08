@@ -6,14 +6,17 @@ import "./dropdown.css";
 
 export interface DropdownProps {
   title: string;
-  children: any[];
+  children: {
+    name: string;
+    keys: string;
+  }[];
 }
 
 
 export const Dropdown = (props: DropdownProps) => {
   const [open, setOpen] = useState(false);
 
-  const [current_option, setCurrentOption] = useState(props.children[0]);
+  const [current_option, setCurrentOption] = useState(props.children[0].name);
 
   const toggle = () => setOpen(!open);
 
@@ -31,11 +34,11 @@ export const Dropdown = (props: DropdownProps) => {
                 key={index}
                 className="dropdown__menu__item"
                 onClick={() => {
-                  setCurrentOption(option);
+                  setCurrentOption(option.name);
                   setOpen(false);
                 }}
               >
-                {option}
+                {option.name}
               </div>
             ))}
         </div>
