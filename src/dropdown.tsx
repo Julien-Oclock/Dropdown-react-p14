@@ -1,13 +1,14 @@
 
 import React from "react";
 import { useState } from "react";
+import "./dropdown.css";
+
 
 export interface DropdownProps {
   title: string;
   children: any[];
 }
 
-import "./dropdown.css";
 
 export const Dropdown = (props: DropdownProps) => {
   const [open, setOpen] = useState(false);
