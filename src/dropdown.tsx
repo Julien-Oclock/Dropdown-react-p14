@@ -19,6 +19,8 @@ export const Dropdown = (props: DropdownProps) => {
 
   return (
     <div className="dropdown">
+      <style>
+      </style>
       <div className="dropdown__toggle" onClick={toggle}>
         {current_option}
       </div>
