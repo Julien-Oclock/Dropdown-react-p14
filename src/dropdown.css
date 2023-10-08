@@ -1,0 +1,42 @@
+/* dropdown.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Style du conteneur principal du dropdown */
+.dropdown {
+  background: #c9c9c9;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+.dropdown__toggle {
+  background: #b43f3f;
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.dropdown__toggle:hover {
+  background: #a33838;
+}
+
+.dropdown__menu {
+  background: #fff;
+  padding: 10px;
+  margin-top: 0;
+  border: 1px solid #b43f3f;
+  border-top: none;
+}
+
+.dropdown__menu__item{
+  padding: 10px;
+  text-align: center;
+}
+.dropdown__menu__item:hover {
+  background: #b95959;
+  color: white;
+}
+
+.dropdown__menu__item:last-child {
+  border-bottom: none;
+}
+
