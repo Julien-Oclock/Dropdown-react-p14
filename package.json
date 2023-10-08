@@ -1,6 +1,6 @@
 {
   "name": "custom-dropdown-react",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "A simple dropdown component for React",
   "main": "index.js",
   "scripts": {
