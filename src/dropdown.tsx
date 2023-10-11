@@ -10,6 +10,7 @@ export interface DropdownProps {
     name: string;
     keys: string;
   }[];
+  onChange: (selectedOption: string) => void;
 }
 
 
@@ -23,6 +24,11 @@ export const Dropdown = (props: DropdownProps) => {
 
   const toggle = () => setOpen(!open);
 
+  const handleOptionSelect = (optionName: string) => {
+    setCurrentOption(optionName);
+    setOpen(false);
+    props.onChange(optionName); // Appel de la fonction de rappel du parent
+  };
 
   return (
     <div className="dropdown">
@@ -38,8 +44,7 @@ export const Dropdown = (props: DropdownProps) => {
                 key={index}
                 className="dropdown__menu__item"
                 onClick={() => {
-                  setCurrentOption(option.name);
-                  setOpen(false);
+                  handleOptionSelect(option.name);
                 }}
               >
                 {option.name}
