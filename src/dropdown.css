@@ -3,27 +3,27 @@
 
 /* Style du conteneur principal du dropdown */
 .dropdown {
-  background: #c9c9c9;
-  width: 100%;
-  font-family: 'Lato', sans-serif;
+  width: 85%;
+  margin-bottom: 15px;
+  border-radius: 3px;
 }
 
 .dropdown__toggle {
-  background: #b43f3f;
+  background: #0056b3;
   text-align: center;
   text-transform: capitalize;
   color: #fff;
 }
 
 .dropdown__toggle:hover {
-  background: #a33838;
+  background: #014997;
 }
 
 .dropdown__menu {
   background: #fff;
   padding: 10px;
   margin-top: 0;
-  border: 1px solid #b43f3f;
+  border: 1px solid #3f8cde;
   border-top: none;
 }
 
