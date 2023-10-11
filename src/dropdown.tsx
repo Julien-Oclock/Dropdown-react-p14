@@ -38,7 +38,7 @@ export const Dropdown = (props: DropdownProps) => {
         {current_option}
       </div>
       {open && (
-        <div>
+        <div className="options-wrapper">
             {props.children.map((option, index) => (
               <div
                 key={index}
