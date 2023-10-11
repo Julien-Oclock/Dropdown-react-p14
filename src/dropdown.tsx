@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./dropdown.css";
 
@@ -16,9 +16,13 @@ export interface DropdownProps {
 export const Dropdown = (props: DropdownProps) => {
   const [open, setOpen] = useState(false);
 
-  const [current_option, setCurrentOption] = useState(props.children[0].name);
+  const [current_option, setCurrentOption] = useState(
+    props.children.length > 0 ? props.children[0].name : ""
+  );
+
 
   const toggle = () => setOpen(!open);
+
 
   return (
     <div className="dropdown">
