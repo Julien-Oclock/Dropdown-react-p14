@@ -11,6 +11,14 @@ export interface DropdownProps {
     keys: string;
   }[];
   onChange: (selectedOption: string) => void;
+  size?:string;
+  color?:string;
+  backgroundColor?:string;
+  borderColor?:string;
+  borderRadius?:string;
+  backgroundColorItem?:string;
+  colorItem?:string;
+  backgroundColorItemHover?:string;
 }
 
 
@@ -20,6 +28,20 @@ export const Dropdown = (props: DropdownProps) => {
   const [current_option, setCurrentOption] = useState(
     props.children.length > 0 ? props.children[0].name : ""
   );
+
+  const dropdownStyle = {
+    color: props.color || "white", 
+    fontSize: props.size || "16px",
+    backgroundColor: props.backgroundColor || "white",
+    borderColor: props.borderColor || "#0056b3",
+    borderRadius: props.borderRadius || "5px", 
+  };
+
+  const dropdownItemStyle = {
+    color: props.colorItem || "white", 
+    backgroundColor: props.backgroundColorItem || "#3f8cde",
+    backgroundColorItemHover: props.backgroundColorItemHover || "#b95959",
+  };
 
 
   const toggle = () => setOpen(!open);
@@ -34,7 +56,9 @@ export const Dropdown = (props: DropdownProps) => {
     <div className="dropdown">
       <style>
       </style>
-      <div className="dropdown__toggle" onClick={toggle}>
+      <div style={
+        dropdownStyle
+      }  onClick={toggle}>
         {current_option}
       </div>
       {open && (
@@ -42,10 +66,12 @@ export const Dropdown = (props: DropdownProps) => {
             {props.children.map((option, index) => (
               <div
                 key={index}
-                className="dropdown__menu__item"
                 onClick={() => {
                   handleOptionSelect(option.name);
                 }}
+                style={
+                  dropdownItemStyle
+                }
               >
                 {option.name}
               </div>
