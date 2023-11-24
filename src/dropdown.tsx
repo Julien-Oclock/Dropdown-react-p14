@@ -14,6 +14,7 @@ export interface DropdownProps {
   size?:string;
   color?:string;
   backgroundColor?:string;
+  border : string;
   borderColor?:string;
   borderRadius?:string;
   backgroundColorItem?:string;
@@ -33,8 +34,9 @@ export const Dropdown = (props: DropdownProps) => {
     color: props.color || "white", 
     fontSize: props.size || "16px",
     backgroundColor: props.backgroundColor || "white",
-    borderColor: props.borderColor || "#0056b3",
+    borderColor: props.borderColor || "#ccc",
     borderRadius: props.borderRadius || "5px", 
+    border : props.border || "1px solid #ccc",
   };
 
   const dropdownItemStyle = {
