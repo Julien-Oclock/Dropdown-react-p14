@@ -54,9 +54,7 @@ export const Dropdown = (props: DropdownProps) => {
 
   return (
     <div className="dropdown">
-      <style>
-      </style>
-      <div style={
+      <div className="dropdown__toggle" style={
         dropdownStyle
       }  onClick={toggle}>
         {current_option}
@@ -69,6 +67,7 @@ export const Dropdown = (props: DropdownProps) => {
                 onClick={() => {
                   handleOptionSelect(option.name);
                 }}
+                className="dropdown__menu__item"
                 style={
                   dropdownItemStyle
                 }
